@@ -57,6 +57,45 @@ Util.buildClassificationGrid = async function(data){
   return grid
 }
 
+/* **************************************
+* Build the vehicle details view HTML
+* ************************************ */
+Util.buildInventoryDetails = async function(data){
+  let details
+  if(data.length > 0){
+    details = '<div class="row">'
+      details += '<section class="image-section">'
+      details += '<img src="' + data[0].inv_image 
+      +'" alt="Image of '+ data[0].inv_make + ' ' + data[0].inv_model 
+      +' on CSE Motors" />'
+      details += '</section>'      
+      details += '<section class="price-section">'
+      details += '<h2>' + data[0].inv_make + ' ' + data[0].inv_model + ' Details: </h2>'
+      details +=  '<p id="des"><span>Description: </span>'+ data[0].inv_description + '</p>' 
+      details += '<p id="price">'
+      details += '<span>Price: $' 
+      + new Intl.NumberFormat('en-US').format(data[0].inv_price) + '</span>'
+      details += '</p>'
+      details += '<p><span>Make: </span>'
+       + data[0].inv_make +'</p>' 
+       details += '<p><span>Model: </span>'
+      + data[0].inv_model + '</p>' 
+      details += '<p><span>Color: </span>'
+      + data[0].inv_color + '</p>' 
+      details += '<p><span>Year: </span>'
+      + data[0].inv_year + '</p>'
+      details += '<p><span>Milage: </span>'
+      + new Intl.NumberFormat('en-US').format(data[0].inv_miles) + '</p>'          
+    details += '</section>' 
+    details += '</div>'          
+    
+  } else { 
+    details += '<p class="notice">Sorry, no matching vehicles could be found.</p>'
+  }
+  return details
+}
+
+
 /* ****************************************
  * Middleware For Handling Errors
  * Wrap other function in this for 

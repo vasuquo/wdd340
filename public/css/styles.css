@@ -211,6 +211,35 @@ nav ul li a:hover {background-color: firebrick;}
     font-weight: 400;
 }
 
+.image-section, .price-section {
+  max-width: 100%;
+  margin: 0 auto;  
+}
+
+.image-section img {
+  max-width: 100%;
+}
+
+
+.price-section p {
+  margin-top: 10px;
+  display: block;
+  padding: 10px;
+  border: 1px;
+}
+
+.price-section h2 {
+  margin-top: 15px;
+}
+
+#price {
+  background-color: bisque;
+}
+
+span {
+  font-weight: bold;
+}
+
 /* ========== TABLET SCREENS  ========== */
 @media (min-width: 600px) {
 
@@ -225,6 +254,16 @@ nav ul li a:hover {background-color: firebrick;}
     height: 165px;
   }
 
+  .price-section {
+    max-width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .image-section {
+    max-width: 100%;
+    margin-left: 20px;
+  }
 
 }
 
@@ -309,6 +348,10 @@ nav ul li a:hover {background-color: firebrick;}
 .features-list li {
     margin: 20px;
     font-size: 20px;
+}
+
+.image-section, .price-section {
+  max-width: 50%;
 }
 
 footer {
