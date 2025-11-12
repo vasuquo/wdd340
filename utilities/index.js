@@ -64,12 +64,12 @@ Util.buildInventoryDetails = async function(data){
   let details
   if(data.length > 0){
     details = '<div class="row">'
-      details += '<div class="image-section">'
+      details += '<section class="image-section">'
       details += '<img src="' + data[0].inv_image 
       +'" alt="Image of '+ data[0].inv_make + ' ' + data[0].inv_model 
-      +' on CSE Motors" />'
-      details += '</div>'      
-      details += '<div class="price-section">'
+      +'" />'
+      details += '</section>'      
+      details += '<section class="price-section">'
       details += '<h2>' + data[0].inv_make + ' ' + data[0].inv_model + ' Details: </h2>'
       details +=  '<p id="des"><span>Description: </span>'+ data[0].inv_description + '</p>' 
       details += '<p id="price">'
@@ -86,7 +86,7 @@ Util.buildInventoryDetails = async function(data){
       + data[0].inv_year + '</p>'
       details += '<p><span>Milage: </span>'
       + new Intl.NumberFormat('en-US').format(data[0].inv_miles) + '</p>'          
-    details += '</div>' 
+    details += '</section>' 
     details += '</div>'          
     
   } else { 
