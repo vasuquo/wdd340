@@ -95,6 +95,16 @@ Util.buildInventoryDetails = async function(data){
   return details
 }
 
+/* **************************************
+* Build custom error view
+* ************************************ */
+Util.getCustomError = function(message){
+  let custom
+  custom = '<div class="error-container">'
+  custom += '<p>' + message + '</p></div>'
+  return custom
+}
+
 
 /* ****************************************
  * Middleware For Handling Errors

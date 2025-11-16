@@ -240,6 +240,13 @@ span {
   font-weight: bold;
 }
 
+.error-container {
+  display: block;
+  max-width: 100%;
+  justify-content: center;
+  background-image: url("/images/site/bg.jpg"); 
+}
+
 /* ========== TABLET SCREENS  ========== */
 @media (min-width: 600px) {
 
