@@ -221,7 +221,7 @@ nav ul li a:hover {background-color: firebrick;}
 }
 
 
-.price-section p {
+.price-section h3 {
   margin-top: 10px;
   display: block;
   padding: 10px;
@@ -237,7 +237,7 @@ nav ul li a:hover {background-color: firebrick;}
 }
 
 span {
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .error-container {
