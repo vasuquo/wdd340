@@ -8,6 +8,7 @@
 const express = require("express")
 const expressLayouts = require("express-ejs-layouts")
 const baseController = require("./controllers/baseController")
+const errorController = require("./controllers/errorController")
 const utilities = require("./utilities/")
 const env = require("dotenv").config()
 const app = express()
@@ -28,6 +29,7 @@ app.use(static)
 // Index route
 // app.get("/", baseController.buildHome)
 app.get("/", utilities.handleErrors(baseController.buildHome))
+app.get("/oop", utilities.handleErrors(errorController.helloWorld))
 app.use("/inv", inventoryRoute)
 //app.use("/oop", sayHello)
 // File Not Found Route - must be last route in list
