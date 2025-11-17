@@ -245,6 +245,19 @@ span {
   max-width: 100%;
   justify-content: center;
   background-image: url("/images/site/bg.jpg"); 
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  height: 300px; 
+  width: 100%; 
+}
+
+.error-container p {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: peru;
 }
 
 /* ========== TABLET SCREENS  ========== */
@@ -271,6 +284,16 @@ span {
     max-width: 100%;
     margin-left: 20px;
   }
+
+  .error-container {
+    height: 455px;
+  }
+
+  .error-container p {
+    margin-top: 25px;
+    font-size: 24px;
+}
+
 
 }
 
@@ -306,8 +329,6 @@ span {
     font-size: 18px;
   }
 
-
-
   .row {
     display: flex;
   }
@@ -336,13 +357,13 @@ span {
     max-width: 150px;
     max-height: 60px;
   }
-.siteName a {
-  font-size: 48px;
-}
+  .siteName a {
+    font-size: 48px;
+  }
 
-#tools a {
-  font-size: 28px;
-}
+  #tools a {
+    font-size: 28px;
+  }
 
 .cards-section, .features-section {
   max-width:50%;  
@@ -364,6 +385,15 @@ span {
 footer {
   font-size: 18px;
 }
+.error-container {
+  height: 900px; 
+}
+
+.error-container p { 
+  margin-top: 45px;
+  font-size: 32px;
+}
+
 
 }
 

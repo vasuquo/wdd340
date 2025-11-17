@@ -32,15 +32,7 @@ app.use("/inv", inventoryRoute)
 //app.use("/oop", sayHello)
 // File Not Found Route - must be last route in list
 app.use(async (req, res, next) => {
-//  next({status: 404, message: 'Sorry, we appear to have lost that page.'})
-  let nav = await utilities.getNav()
-  let message = 'Sorry, we appear to have lost that page.'
-  let custom = utilities.getCustomError(message)
-  res.render("errors/error", {
-    title: '404',
-    custom,
-    nav
-  })
+  next({status: 404, message: 'Sorry, we appear to have lost that page.'})
 })
 
 /* ***********************
