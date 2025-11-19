@@ -11,4 +11,6 @@ showHidePassword = () => {
         }
       };
 
-toggler.addEventListener('click', showHidePassword);
+if (toggler) {
+    toggler.addEventListener('click', showHidePassword);
+}
