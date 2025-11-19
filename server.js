@@ -17,6 +17,7 @@ const app = express()
 const static = require("./routes/static")
 const inventoryRoute = require("./routes/inventoryRoute.")
 const accountRoute = require("./routes/accountRoute")
+const bodyParser = require("body-parser")
 
 
 /* ***********************
@@ -43,6 +44,9 @@ app.use(function(req, res, next){
   next()
 })
 
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
+
 //View Engine and Templates
 app.set("view engine", "ejs")
 app.use(expressLayouts)
@@ -56,6 +60,7 @@ app.get("/", utilities.handleErrors(baseController.buildHome))
 app.get("/oop", utilities.handleErrors(errorController.helloWorld))
 app.use("/inv", inventoryRoute)
 app.use("/account", accountRoute)
+app.get('/favicon.ico', (req, res) => res.status(204));
 // File Not Found Route - must be last route in list
 app.use(async (req, res, next) => {
   next({status: 404, message: 'Sorry, we appear to have lost that page.'})

@@ -5,17 +5,18 @@
 } %>
 
 <%- messages() %>
-<div class="login-container">
+<div class="account-container">
         <form action="#" method="POST">
             <div class="input-group">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
             </div>
-            <div class="input-group">
+            <div class="input-group password-field">
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
+                <span id="toggler"><img src="/images/site/closed-eye.png" alt="Eye"></span>
             </div>
             <button type="submit">Login</button>
-            <p>No Account? <a href="">Sign-up</a></p>
+            <p>No Account? <a href="/account/register">Sign-up</a></p>
         </form>
 </div>

@@ -3,7 +3,10 @@ const router = new express.Router()
 const utilities = require("../utilities/")
 const accountController = require("../controllers/accountController")
 
-// Route to build inventory by classification view
-router.get("/login", utilities.handleErrors(accountController.buildLogin));
+// Route to build account login and registration view
+router.get("/login", utilities.handleErrors(accountController.buildLogin))
+router.get("/register", utilities.handleErrors(accountController.buildRegister))
+// Route to initiate registration of data from the registration form
+router.post("/register", utilities.handleErrors(accountController.registerAccount))
 
 module.exports = router
